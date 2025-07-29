@@ -11,66 +11,78 @@ int main(){
 
     // Information of card1
 
-    printf("Welcome to the Super Trunfo game!\n");
+    printf("Bem vindo ao Jogo Super Trunfo!\n");
 
-    printf("Enter the information of the card1:\n");
+    printf("Digite as informações da carta 1:\n");
 
-    printf("Enter the name of the state: ");
+    printf("Digite o nome do estado: ");
     fgets(state1, sizeof(state1), stdin);
 
-    printf("Enter the code of the card1: ");
+    printf("Digite o código da carta: ");
     fgets(cardCode1, sizeof(cardCode1), stdin);
 
-    printf("Enter the name of the city: ");
+    printf("Digite o nome da cidade: ");
     fgets(nameCity1, sizeof(nameCity1), stdin);
 
-    printf("Enter the population of the city: ");
+    printf("Digite a população: ");
     scanf("%d", &population1);
 
-    printf("enter the area of the state: ");
+    printf("Digite a área: ");
     scanf("%f", &area1);
 
-    printf("Enter the PIB of the state: ");
+    printf("Digite o PIB: ");
     scanf("%f", &PIB1);
 
-    printf("Enter the number of tourist attractions: ");
+    printf("Digite o número de pontos turísticos: ");
     scanf("%d", &turistcAttractions1);
 
     // Information of card2
 
-    printf("enter the information of the card2:\n");
+    printf("\nDigite as informações da carta 2:\n");
 
-    printf("Enter the name of the state: ");
+    printf("Digite o nome do estado: ");
     fgets(state2, sizeof(state2), stdin);
 
-    printf("Enter the code of the card2: ");
+    printf("Digite o código da carta: ");
     fgets(cardCode2, sizeof(cardCode2), stdin);
 
-    printf("Enter the name of the city: ");
+    printf("Digite o nome da cidade: ");
     fgets(nameCity2, sizeof(nameCity2), stdin);
 
-    printf("Enter the population of the city: ");
+    printf("Digite a população: ");
     scanf("%d", &population2);
 
+    printf("Digite a área: ");
+    scanf("%f", &area2);
+
+    printf("Digite o PIB: ");
+    scanf("%f", &PIB2);
+
+    printf("Digite o número de pontos turísticos: ");
+    scanf("%d", &turistcAttractions2);
+
+
     // Print information of card1
-    printf("\nCard1:\n");
-    printf("State: %s", state1);
-    printf("Card Code: %s", cardCode1);
-    printf("City: %s", nameCity1);
-    printf("Population: %d\n", population1);
-    printf("Area: %.2f\n", area1);
+
+    printf("\nCarta 1:\n");
+    printf("Estado: %s", state1);
+    printf("Código: %s", cardCode1);
+    printf("Nome da Cidade: %s", nameCity1);
+    printf("População: %d\n", population1);
+    printf("Área: %.2f km2 \n", area1);
     printf("PIB: %.2f\n", PIB1);
-    printf("Tourist Attractions: %d\n", turistcAttractions1);
+    printf("Número de Pontos Turísticos: %d\n", turistcAttractions1);
 
     // Print information of card2
-    printf("\nCard2:\n");
-    printf("State: %s", state2);
-    printf("Card Code: %s", cardCode2);
-    printf("City: %s", nameCity2);
-    printf("Population: %d\n", population2);
-    printf("Area: %.2f\n", area2);
+    
+    printf("\nCarta 2:\n");
+    printf("Estado: %s", state2);
+    printf("Código: %s", cardCode2);
+    printf("Nome da Cidade: %s", nameCity2);
+    printf("População: %d\n", population2);
+    printf("Área: %.2f km2\n", area2);
     printf("PIB: %.2f\n", PIB2);
-    printf("Tourist Attractions: %d\n", turistcAttractions2);
+    printf("Número de Pontos Túristicos: %d\n", turistcAttractions2);
 
 
     return 0;
