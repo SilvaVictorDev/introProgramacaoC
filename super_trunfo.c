@@ -1,6 +1,10 @@
 #include <stdio.h>
 
+// Super Triumph Cards Game
+
 int main(){
+
+    // Variable declaration
 
     int population1, turistcAttractions1,
         population2, turistcAttractions2;
@@ -9,9 +13,10 @@ int main(){
     char state1[50], cardCode1[10], nameCity1[50], 
          state2[50], cardCode2[10], nameCity2[50];
 
-    // Information of card1
 
     printf("Bem vindo ao Jogo Super Trunfo!\n");
+
+    // Information of card1
 
     printf("Digite as informações da carta 1:\n");
 
@@ -41,7 +46,8 @@ int main(){
     printf("\nDigite as informações da carta 2:\n");
 
     printf("Digite o nome do estado: ");
-    fgets(state2, sizeof(state2), stdin);
+    scanf("%s", state2);
+    //fgets(state2, sizeof(state2), stdin);
 
     printf("Digite o código da carta: ");
     fgets(cardCode2, sizeof(cardCode2), stdin);
@@ -69,8 +75,8 @@ int main(){
     printf("Código: %s", cardCode1);
     printf("Nome da Cidade: %s", nameCity1);
     printf("População: %d\n", population1);
-    printf("Área: %.2f km2 \n", area1);
-    printf("PIB: %.2f\n", PIB1);
+    printf("Área: %.2f km2\n", area1);
+    printf("PIB: %.2f bilhões de reais\n", PIB1);
     printf("Número de Pontos Turísticos: %d\n", turistcAttractions1);
 
     // Print information of card2
@@ -81,7 +87,7 @@ int main(){
     printf("Nome da Cidade: %s", nameCity2);
     printf("População: %d\n", population2);
     printf("Área: %.2f km2\n", area2);
-    printf("PIB: %.2f\n", PIB2);
+    printf("PIB: %.2f bilhões de reais\n", PIB2);
     printf("Número de Pontos Túristicos: %d\n", turistcAttractions2);
 
 
