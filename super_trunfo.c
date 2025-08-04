@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-// Super Triumph Cards Game
+// Super Trunfo Game
 
 int main(){
 
-    // Variable declaration
+    // Variables declaration
 
     int population1, turistcAttractions1,
         population2, turistcAttractions2;
@@ -12,7 +12,6 @@ int main(){
           area2, PIB2;
     char state1[50], cardCode1[10], nameCity1[50], 
          state2[50], cardCode2[10], nameCity2[50];
-
 
     printf("Bem vindo ao Jogo Super Trunfo!\n");
 
@@ -40,14 +39,14 @@ int main(){
 
     printf("Digite o número de pontos turísticos: ");
     scanf("%d", &turistcAttractions1);
+    getchar(); // Clear the newline character from the input buffer
 
     // Information of card2
 
     printf("\nDigite as informações da carta 2:\n");
 
     printf("Digite o nome do estado: ");
-    scanf("%s", state2);
-    //fgets(state2, sizeof(state2), stdin);
+    fgets(state2, sizeof(state2), stdin);
 
     printf("Digite o código da carta: ");
     fgets(cardCode2, sizeof(cardCode2), stdin);
@@ -66,8 +65,8 @@ int main(){
 
     printf("Digite o número de pontos turísticos: ");
     scanf("%d", &turistcAttractions2);
-
-
+    getchar(); // Clear the newline character from the input buffer
+    
     // Print information of card1
 
     printf("\nCarta 1:\n");
