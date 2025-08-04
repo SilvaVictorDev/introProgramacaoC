@@ -1,6 +1,8 @@
 #include <stdio.h>
 
 // Super Trunfo Game
+//link da atividade no github
+//https://github.com/Cursos-TI/desafio-cadastro-das-cartas-no-super-trunfo-SilvaVictorDev/blob/main/CartasSuperTrunfo.c
 
 int main(){
 
