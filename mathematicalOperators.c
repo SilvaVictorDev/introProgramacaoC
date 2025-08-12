@@ -18,6 +18,29 @@ int main() {
     printf("Increment: a++ = %d, now a = %d\n", a++, a);
     printf("Decrement: b-- = %d, now b = %d\n", b--, b);
 
+    // Mathematical Operations Class
+
+    int number1, number2;
+    int sum, difference, multiplication, division;
+
+    printf("Digite o primeiro número: ");
+    scanf("%d", &number1);
+    printf("Digite o segundo número: ");
+    scanf("%d", &number2);
+    // Sum Operation
+    sum = number1 + number2;
+    // Difference Operation
+    difference = number1 - number2;
+    // Multiplication Operation
+    multiplication = number1 * number2;
+    // Division Operation
+    division = number1 / number2;
+
+    printf("A Soma é: %d\n", sum);
+    printf("A Diferença é: %d\n", difference);
+    printf("A Multiplicação é: %d\n", multiplication);
+    printf("A Divisão é: %d\n", division);
+
     return 0;
 
 }
