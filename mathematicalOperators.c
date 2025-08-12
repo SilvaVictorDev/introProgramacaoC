@@ -14,10 +14,6 @@ int main() {
     // Floating-point division
     printf("Floating-point Division: %.2f / %.2f = %.2f\n", x, y, x / y);
 
-    // Increment and Decrement Operators
-    printf("Increment: a++ = %d, now a = %d\n", a++, a);
-    printf("Decrement: b-- = %d, now b = %d\n", b--, b);
-
     // Mathematical Operations Class
 
     int number1, number2;
