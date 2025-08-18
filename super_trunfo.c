@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-// Super Trunfo Game
+// Super Trunfo Game Version 2
 //link da atividade no github
-//https://github.com/Cursos-TI/desafio-cadastro-das-cartas-no-super-trunfo-SilvaVictorDev/blob/main/CartasSuperTrunfo.c
+//
 
 int main(){
 
@@ -10,8 +10,8 @@ int main(){
 
     int population1, turistcAttractions1,
         population2, turistcAttractions2;
-    float area1, PIB1,
-          area2, PIB2;
+    float area1, PIB1, densPop1, pibPerCap1,
+          area2, PIB2, densPop2, pibPerCap2;
     char state1[50], cardCode1[10], nameCity1[50], 
          state2[50], cardCode2[10], nameCity2[50];
 
@@ -68,6 +68,14 @@ int main(){
     printf("Digite o número de pontos turísticos: ");
     scanf("%d", &turistcAttractions2);
     getchar(); // Clear the newline character from the input buffer
+
+    // Calcutation of Population Density and PIB per capita
+
+    densPop1 = population1 / area1;
+    pibPerCap1 = PIB1 / population1;
+    densPop2 = population2 / area2;
+    pibPerCap2 = PIB2 / population2;
+
     
     // Print information of card1
 
@@ -79,6 +87,8 @@ int main(){
     printf("Área: %.2f km2\n", area1);
     printf("PIB: %.2f bilhões de reais\n", PIB1);
     printf("Número de Pontos Turísticos: %d\n", turistcAttractions1);
+    printf("Densidade Populacional: %.2f hab/km2", densPop1);
+    printf("PIB per Capita: %.2f reais", pibPerCap1);
 
     // Print information of card2
     
@@ -90,7 +100,8 @@ int main(){
     printf("Área: %.2f km2\n", area2);
     printf("PIB: %.2f bilhões de reais\n", PIB2);
     printf("Número de Pontos Túristicos: %d\n", turistcAttractions2);
-
+    printf("Densidade Populacional: %.2f hab/km2", densPop2);
+    printf("PIB per Capita: %.2f reais", pibPerCap2);
 
     return 0;
 
