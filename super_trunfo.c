@@ -71,10 +71,10 @@ int main(){
 
     // Calcutation of Population Density and PIB per capita
 
-    densPop1 = population1 / area1;
-    pibPerCap1 = PIB1 / population1;
-    densPop2 = population2 / area2;
-    pibPerCap2 = PIB2 / population2;
+    densPop1 = (float) population1 / area1;
+    pibPerCap1 = (float) (PIB1 * 1000000000) / population1;
+    densPop2 = (float) population2 / area2;
+    pibPerCap2 = (float) (PIB2 * 1000000000) / population2;
 
     
     // Print information of card1
@@ -87,8 +87,8 @@ int main(){
     printf("Área: %.2f km2\n", area1);
     printf("PIB: %.2f bilhões de reais\n", PIB1);
     printf("Número de Pontos Turísticos: %d\n", turistcAttractions1);
-    printf("Densidade Populacional: %.2f hab/km2", densPop1);
-    printf("PIB per Capita: %.2f reais", pibPerCap1);
+    printf("Densidade Populacional: %.2f hab/km2\n", densPop1);
+    printf("PIB per Capita: %.2f reais\n", pibPerCap1);
 
     // Print information of card2
     
@@ -100,8 +100,8 @@ int main(){
     printf("Área: %.2f km2\n", area2);
     printf("PIB: %.2f bilhões de reais\n", PIB2);
     printf("Número de Pontos Túristicos: %d\n", turistcAttractions2);
-    printf("Densidade Populacional: %.2f hab/km2", densPop2);
-    printf("PIB per Capita: %.2f reais", pibPerCap2);
+    printf("Densidade Populacional: %.2f hab/km2\n", densPop2);
+    printf("PIB per Capita: %.2f reais\n", pibPerCap2);
 
     return 0;
 
