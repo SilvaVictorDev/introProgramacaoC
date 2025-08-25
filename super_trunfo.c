@@ -10,8 +10,8 @@ int main(){
 
     int population1, turistcAttractions1,
         population2, turistcAttractions2;
-    float area1, PIB1, densPop1, pibPerCap1,
-          area2, PIB2, densPop2, pibPerCap2;
+    float area1, PIB1, densPop1, pibPerCap1, supPower1, invDensPop1,
+          area2, PIB2, densPop2, pibPerCap2, supPower2, invDensPop2;
     char state1[50], cardCode1[10], nameCity1[50], 
          state2[50], cardCode2[10], nameCity2[50];
 
@@ -69,12 +69,17 @@ int main(){
     scanf("%d", &turistcAttractions2);
     getchar(); // Clear the newline character from the input buffer
 
-    // Calcutation of Population Density and PIB per capita
+    // Calcutation of Population Density, PIB per capita, Inverse of Population Density and Super Power
 
     densPop1 = (float) population1 / area1;
-    pibPerCap1 = (float) (PIB1 * 1000000000) / population1;
+    invDensPop1 = 1 / densPop1;
+    pibPerCap1 = (PIB1 * 1000000000) / (float) population1;
+    supPower1 = (float) population1 + (float) turistcAttractions1 + area1 + PIB1 + invDensPop1 + pibPerCap1;
+
     densPop2 = (float) population2 / area2;
-    pibPerCap2 = (float) (PIB2 * 1000000000) / population2;
+    invDensPop2 = 1 / densPop2;
+    pibPerCap2 = (PIB2 * 1000000000) / (float) population2;
+    supPower2 = (float) population2 + (float) turistcAttractions2 + area2 + PIB2 + invDensPop2 + pibPerCap2;
 
     
     // Print information of card1
@@ -102,6 +107,12 @@ int main(){
     printf("Número de Pontos Túristicos: %d\n", turistcAttractions2);
     printf("Densidade Populacional: %.2f hab/km2\n", densPop2);
     printf("PIB per Capita: %.2f reais\n", pibPerCap2);
+
+    // Print of winner card
+
+    printf("\nResultado do Jogo:\n");
+    printf("População: Carta 1 (%d) \n", population1 > population2);
+    printf("Área: Carta 2 (%.d) \n", area2 > area1);
 
     return 0;
 
