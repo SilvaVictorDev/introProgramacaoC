@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Super Trunfo Game Version 2
+// Super Trunfo Game Version 3
 // Link da atividade no github Estacio
 // https://github.com/Cursos-TI/desafio-cadastro-das-cartas-no-super-trunfo-SilvaVictorDev/blob/main/super_trunfo.c
 
@@ -15,11 +15,11 @@ int main(){
     char state1[50], cardCode1[10], nameCity1[50], 
          state2[50], cardCode2[10], nameCity2[50];
 
-    printf("Bem vindo ao Jogo Super Trunfo!\n");
+    printf("##### Bem vindo ao Jogo Super Trunfo! #####\n");
 
     // Information of card1
 
-    printf("Digite as informações da carta 1:\n");
+    printf("\nDigite as informações da carta 1:\n");
 
     printf("Digite o nome do estado: ");
     fgets(state1, sizeof(state1), stdin);
@@ -32,6 +32,7 @@ int main(){
 
     printf("Digite a população: ");
     scanf("%d", &population1);
+    getchar();
 
     printf("Digite a área: ");
     scanf("%f", &area1);
@@ -58,6 +59,7 @@ int main(){
 
     printf("Digite a população: ");
     scanf("%d", &population2);
+    getchar();
 
     printf("Digite a área: ");
     scanf("%f", &area2);
@@ -67,7 +69,7 @@ int main(){
 
     printf("Digite o número de pontos turísticos: ");
     scanf("%d", &turistcAttractions2);
-    getchar(); // Clear the newline character from the input buffer
+    getchar();
 
     // Calcutation of Population Density, PIB per capita, Inverse of Population Density and Super Power
 
@@ -81,7 +83,8 @@ int main(){
     pibPerCap2 = (PIB2 * 1000000000) / (float) population2;
     supPower2 = (float) population2 + (float) turistcAttractions2 + area2 + PIB2 + invDensPop2 + pibPerCap2;
 
-    
+    printf("\n##### Informações das Cartas ######\n");
+
     // Print information of card1
 
     printf("\nCarta 1:\n");
@@ -110,9 +113,15 @@ int main(){
 
     // Print of winner card
 
-    printf("\nResultado do Jogo:\n");
-    printf("População: Carta 1 (%d) \n", population1 > population2);
-    printf("Área: Carta 2 (%.d) \n", area2 > area1);
+    printf("\n##### Resultado do Jogo: ######\n");
+    printf("\nPopulação: Carta 1 venceu (%d) \n", population1 > population2);
+    printf("Área: Carta 1 venceu (%d) \n", area1 > area2);
+    printf("PIB: Carta 1 venceu (%d) \n", PIB1 > PIB2);
+    printf("Número de Pontos Turísticos: Carta 1 venceu (%d) \n", turistcAttractions1 > turistcAttractions2);
+    printf("Densidade Populacional: Carta 1 venceu (%d) \n", invDensPop1 < invDensPop2);
+    printf("PIB per Capita: Carta 1 venceu (%d) \n", pibPerCap1 > pibPerCap2);
+    printf("Super Power: Carta 1 venceu (%d)\n", supPower1 > supPower2);
+
 
     return 0;
 
