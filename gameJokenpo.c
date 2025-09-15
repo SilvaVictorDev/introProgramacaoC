@@ -48,9 +48,18 @@ int main(){
         break;
     }
     
-    
-    
-    
+    if (escolhaJogador == escolhaComputador)
+    {
+        printf("Empate!\n");
+    }else if ((escolhaJogador == 1 && escolhaComputador == 3) ||
+              (escolhaJogador == 2 && escolhaComputador == 1) ||
+              (escolhaJogador == 3 && escolhaComputador == 2))
+    {
+        printf("Jogador Venceu!\n");
+    }else
+    {
+        printf("Computador Venceu!\n");
+    }
     
     return 0;
 }
