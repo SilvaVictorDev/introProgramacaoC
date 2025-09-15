@@ -22,7 +22,7 @@ int main(){
 
     printf("\nDigite as informações da carta 1:\n");
 
-    printf("Digite o nome do Pais: ");
+    printf("Digite o nome do País: ");
     fgets(country1, sizeof(country1), stdin);
 
     printf("Digite a população: ");
@@ -43,7 +43,7 @@ int main(){
 
     printf("\nDigite as informações da carta 2:\n");
 
-    printf("Digite o nome do estado: ");
+    printf("Digite o nome do País: ");
     fgets(country2, sizeof(country2), stdin);
 
     printf("Digite a população: ");
@@ -72,12 +72,25 @@ int main(){
     pibPerCap2 = (PIB2 * 1000000000) / (float) population2;
     supPower2 = (float) population2 + (float) turistcAttractions2 + area2 + PIB2 + invDensPop2 + pibPerCap2;
 
+
+    // Implement of menu interactive
+
+    printf("##### Menu #####\n");
+    printf("1. Regras do Game.\n");
+    printf("2. Comparar o atributo População\n");
+    printf("3. Comparar o atributo Área\n");
+    printf("4. Comparar o atributo PIB\n");
+    printf("5. Comparar o atributo Ponto Turístico\n");
+    printf("6. Comparar o atributo Densidade Populacional\n");
+
+
+
     printf("\n##### Informações das Cartas ######\n");
 
     // Print information of card1
 
     printf("\nCarta 1:\n");
-    printf("Estado: %s", country1);
+    printf("País: %s", country1);
     printf("População: %d\n", population1);
     printf("Área: %.2f km2\n", area1);
     printf("PIB: %.2f Bilhões de Reais\n", PIB1);
@@ -88,7 +101,7 @@ int main(){
     // Print information of card2
     
     printf("\nCarta 2:\n");
-    printf("Estado: %s", country2);
+    printf("País: %s", country2);
     printf("População: %d\n", population2);
     printf("Área: %.2f km2\n", area2);
     printf("PIB: %.2f Bilhões de Reais\n", PIB2);
@@ -96,19 +109,12 @@ int main(){
     printf("Densidade Populacional: %.2f hab/km2\n", densPop2);
     printf("PIB per Capita: %.2f reais\n", pibPerCap2);
 
+
+
+
     // Print of Winner card
 
-    printf("\n##### Resultado do Jogo: ######\n");
-
-    printf("\nComparação de cartas (Atributo: PIB):\n");
-    printf("Carta 1 - São Paulo (SP) PIB: %.2f Bilhões de Reais\n", PIB1);
-    printf("Carta 2 - Rio de Janeiro (RJ) PIB: %.2f Bilhões de Reais\n", PIB2);
-
-    if (PIB1 > PIB2) {
-        printf("A carta 1 (São Paulo) venceu!\n");
-    }else{
-        printf("A carta 2 (Rio de Janeiro) venceu!\n");
-    }
+    
 
 return 0;
 
