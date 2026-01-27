@@ -1,5 +1,5 @@
 // Game Batalha Naval
-
+// https://github.com/Cursos-TI/desafio-cadastro-das-cartas-no-super-trunfo-SilvaVictorDev/blob/main/batalhaNaval2.c
 #include <stdio.h>
 
 #define TAMANHO_TABULEIRO 10
